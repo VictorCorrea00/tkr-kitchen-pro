@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Cormorant', serif;
+  
+  --color-brand-bg: #FDFBF7;
+  --color-brand-dark: #1C1917;
+  --color-brand-gold: #C5A26F;
+  --color-brand-card: #FFFDFB;
+  --color-brand-gray: #4B5563;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brand-bg text-brand-dark antialiased overflow-x-hidden;
+  }
+}
+
+/* Slider */
+.slider-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: white;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  z-index: 10;
+  cursor: ew-resize;
+}
